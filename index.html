@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Concorrente Já Usa IA — Você Ainda Faz na Mão?</title>
+  <link rel="shortcut icon" href="ChatGPT Image Apr 29, 2026, 03_52_52 PM.png" type="image/x-icon">
+  <meta name="description" content="Seu concorrente já usa IA para fazer o que você ainda faz na mão. Automatize os 5 processos que mais travam sua empresa — sem programar, sem contratar." />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '951919704118410');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=951919704118410&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0A0F1E;
+      --bg2:       #0D1428;
+      --bg3:       #111827;
+      --text:      #FFFFFF;
+      --muted:     #94A3B8;
+      --cyan:      #00D4FF;
+      --cyan-dim:  rgba(0, 212, 255, 0.12);
+      --cyan-glow: rgba(0, 212, 255, 0.35);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { line-height: 1.2; font-weight: 800; }
+    h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.4rem, 4vw, 2.1rem); }
+    h3 { font-size: 1rem; font-weight: 700; }
+
+    .cyan  { color: var(--cyan); }
+    .muted { color: var(--muted); }
+
+    /* ── Layout ── */
+    .container {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section { padding: 64px 0; }
+    #problema, #paraquem, #depoimentos { background: var(--bg2); }
+
+    /* ── CTA Button ── */
+    .btn-cta {
+      display: inline-block;
+      background: var(--cyan);
+      color: #000;
+      font-weight: 800;
+      font-size: clamp(0.95rem, 3vw, 1.1rem);
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      padding: 18px 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+      box-shadow: 0 0 28px var(--cyan-glow);
+    }
+    .btn-cta:hover {
+      background: #33DDFF;
+      box-shadow: 0 0 44px var(--cyan-glow);
+      transform: translateY(-2px);
+    }
+    .btn-cta:active { transform: translateY(0); }
+
+    /* ── Trust Badges ── */
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      justify-content: center;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .trust span { display: flex; align-items: center; gap: 6px; }
+    .trust .check { color: var(--cyan); }
+
+    /* ── HERO ── */
+    #hero {
+      text-align: center;
+      padding: 84px 0 76px;
+      background: radial-gradient(ellipse 80% 55% at 50% -5%,
+        rgba(0,212,255,0.13) 0%, transparent 68%), var(--bg);
+    }
+    #hero .eyebrow {
+      display: inline-block;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 26px;
+    }
+    #hero h1 { margin-bottom: 20px; }
+    #hero .sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+
+    /* ── Social proof numbers ── */
+    .social-numbers {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .social-numbers .num-item {
+      text-align: center;
+    }
+    .social-numbers .num-value {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .social-numbers .num-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      margin: 20px 0 32px;
+    }
+
+    /* ── PROBLEMA ── */
+    #problema h2 { margin-bottom: 32px; }
+    .pain-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--bg3);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-size: 0.97rem;
+      color: #E2E8F0;
+    }
+    .pain-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── SOLUÇÃO ── */
+    #solucao h2 { text-align: center; margin-bottom: 40px; }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 560px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+      .cards .card:last-child { grid-column: 1 / -1; }
+    }
+
+    .card {
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.22);
+      border-radius: 12px;
+      padding: 24px 20px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 22px rgba(0, 212, 255, 0.12);
+    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.88rem; margin-top: 6px; }
+    .saving {
+      display: inline-block;
+      background: var(--cyan-dim);
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-top: 10px;
+    }
+
+    .total-box {
+      margin-top: 32px;
+      text-align: center;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      border-radius: 12px;
+      padding: 28px 20px;
+    }
+    .total-label { color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+    .total-value {
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    /* ── PARA QUEM ── */
+    #paraquem h2 { margin-bottom: 32px; }
+    .fit-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .fit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.97rem;
+      color: #E2E8F0;
+      padding: 16px 18px;
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 10px;
+    }
+    .fit-icon { color: var(--cyan); font-size: 1.1rem; flex-shrink: 0; margin-top: 3px; }
+
+    /* ── DEPOIMENTOS ── */
+    #depoimentos h2 { text-align: center; margin-bottom: 36px; }
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 600px) {
+      .testimonials { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .testimonial-card {
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 12px;
+      padding: 22px 18px;
+    }
+    .testimonial-stars {
+      color: #FFD166;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .testimonial-text {
+      font-size: 0.9rem;
+      color: #CBD5E1;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,212,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan);
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #E2E8F0;
+    }
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── FAQ ── */
+    #faq { background: var(--bg2); }
+    #faq h2 { margin-bottom: 32px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #E2E8F0;
+      font-size: 0.97rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 18px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--cyan); }
+    .faq-icon {
+      font-size: 1.1rem;
+      color: var(--cyan);
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding: 0 20px 18px;
+    }
+
+    /* ── CTA FINAL ── */
+    #cta-final {
+      text-align: center;
+      background: radial-gradient(ellipse 80% 55% at 50% 110%,
+        rgba(0, 212, 255, 0.1) 0%, transparent 68%), var(--bg2);
+    }
+    #cta-final h2 { margin-bottom: 16px; }
+    #cta-final .sub-text {
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      font-size: 0.97rem;
+    }
+
+    .price-block { margin-bottom: 32px; }
+    .old-price {
+      font-size: 1.05rem;
+      color: var(--muted);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .new-price {
+      font-size: clamp(2.2rem, 7vw, 3rem);
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .new-price sup { font-size: 1.1rem; vertical-align: super; font-weight: 700; }
+    .price-note { color: var(--muted); font-size: 0.83rem; margin-top: 8px; }
+
+    .guarantee {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060A14;
+      text-align: center;
+      padding: 36px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .footer-brand {
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--cyan); }
+    .copyright { color: #2D3748; font-size: 0.75rem; }
+
+    /* ── Scroll-reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════
+       1. HERO
+  ════════════════════════════════ -->
+  <section id="hero">
+    <div class="container">
+      <div class="eyebrow">Para donos de negócio que ainda fazem tudo na mão</div>
+
+      <h1>Seu concorrente já usa IA para fazer o que <span class="cyan">você ainda faz na mão</span></h1>
+
+      <p class="sub">Enquanto você lê isso, ele já automatizou o atendimento, o relatório e o email. Você pode fazer o mesmo — sem programar, em menos de 1 dia.</p>
+
+      <a href="https://pay.kiwify.com.br/Qhx40Lj"
+         class="btn-cta"
+         id="cta-hero"
+         onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
+        QUERO O GUIA POR R$27
+      </a>
+
+      <div class="trust">
+        <span><span class="check">✓</span> Acesso imediato</span>
+        <span><span class="check">✓</span> PDF completo</span>
+        <span><span class="check">✓</span> Garantia 7 dias</span>
+      </div>
+
+      <div class="social-numbers">
+        <div class="num-item">
+          <div class="num-value">+200</div>
+          <div class="num-label">empresários atendidos</div>
+        </div>
+        <div class="num-item">
+          <div class="num-value">&lt;1 dia</div>
+          <div class="num-label">para 1ª automação rodar</div>
+        </div>
+        <div class="num-item">
+          <div class="num-value">5★</div>
+          <div class="num-label">avaliação média na Kiwify</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       2. PROBLEMA
+  ════════════════════════════════ -->
+  <section id="problema">
+    <div class="container reveal">
+      <p class="section-label">⚠️ O problema</p>
+      <h2>Cada tarefa feita na mão é uma decisão de negócio que você não tomou</h2>
+      <div class="divider"></div>
+      <ul class="pain-list">
+        <li>
+          <span class="pain-icon">📧</span>
+          <span>Você passa horas respondendo email repetitivo — enquanto poderia estar fechando a próxima venda, contratando o próximo colaborador ou planejando o próximo mês.</span>
+        </li>
+        <li>
+          <span class="pain-icon">📊</span>
+          <span>Toda semana você monta relatório na mão. Toda semana é uma semana que você entrou no operacional em vez de enxergar o negócio de fora.</span>
+        </li>
+        <li>
+          <span class="pain-icon">💸</span>
+          <span>Um cliente mandou mensagem, você demorou para responder, ele foi para o concorrente. Não foi falta de produto — foi falta de processo.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       3. SOLUÇÃO — os 5 processos
+  ════════════════════════════════ -->
+  <section id="solucao">
+    <div class="container reveal">
+      <h2>O que você vai aprender neste guia:</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">📬</div>
+          <h3>Triagem e Resposta de Emails</h3>
+          <p>Classifique, priorize e responda emails automaticamente com IA — sem tocar em uma única mensagem repetitiva.</p>
+          <span class="saving">⏱ 8–10h economizadas/mês</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Relatório Semanal Automático</h3>
+          <p>Gere relatórios completos toda semana sem abrir uma planilha. A IA coleta, organiza e formata tudo por você.</p>
+          <span class="saving">⏱ 4–6h economizadas/mês</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3>Atendimento Inicial no WhatsApp</h3>
+          <p>Responda clientes em segundos, 24h por dia, com um assistente que qualifica leads e agenda reuniões.</p>
+          <span class="saving">⏱ 15–20h economizadas/mês</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🗂️</div>
+          <h3>Preenchimento de Planilha com IA</h3>
+          <p>Chega de copiar e colar. A IA extrai dados de formulários, PDFs e emails e preenche sua planilha sozinha.</p>
+          <span class="saving">⏱ 10–15h economizadas/mês</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <h3>Confirmação e Lembrete de Reuniões</h3>
+          <p>Envie confirmações, lembretes e follow-ups automáticos para todos os seus compromissos. Zero no-shows.</p>
+          <span class="saving">⏱ 3–5h economizadas/mês</span>
+        </div>
+
+      </div>
+
+      <div class="total-box">
+        <p class="total-label">Total de horas recuperadas</p>
+        <p class="total-value">Até 50h economizadas por mês</p>
+        <p class="muted" style="font-size:.85rem;margin-top:10px;">São mais de 600 horas por ano que voltam para você e para o seu negócio.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       4. PARA QUEM É
+  ════════════════════════════════ -->
+  <section id="paraquem">
+    <div class="container reveal">
+      <h2>Este guia é para você se…</h2>
+      <div class="divider"></div>
+      <ul class="fit-list">
+        <li>
+          <span class="fit-icon">✦</span>
+          <span>Tem um negócio próprio e ainda faz tudo na mão, sem nenhum processo automatizado.</span>
+        </li>
+        <li>
+          <span class="fit-icon">✦</span>
+          <span>Quer automatizar mas acha que precisa saber programar — spoiler: <strong>não precisa</strong>.</span>
+        </li>
+        <li>
+          <span class="fit-icon">✦</span>
+          <span>Já tentou Zapier ou Make e desistiu na complexidade das configurações intermináveis.</span>
+        </li>
+        <li>
+          <span class="fit-icon">✦</span>
+          <span>Quer escalar seu negócio sem contratar mais pessoas — usando IA como sua equipe invisível.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       5. DEPOIMENTOS
+  ════════════════════════════════ -->
+  <section id="depoimentos">
+    <div class="container reveal">
+      <p class="section-label" style="text-align:center">💬 O que dizem os empresários</p>
+      <h2>Resultados reais de quem aplicou</h2>
+      <div class="divider" style="margin:20px auto 36px"></div>
+
+      <div class="testimonials">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Implementei o atendimento no WhatsApp em 2 horas. Na primeira semana já fechei 3 clientes que antes ficavam sem resposta."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RC</div>
+            <div>
+              <div class="testimonial-name">Ricardo C.</div>
+              <div class="testimonial-role">Dono de escritório contábil</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Passei de 12h por semana em relatórios para zero. A IA faz tudo. O guia é direto ao ponto, sem enrolação."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">FM</div>
+            <div>
+              <div class="testimonial-name">Fernanda M.</div>
+              <div class="testimonial-role">Gestora de e-commerce</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Nunca mexi com programação na vida. Segui o passo a passo e em uma tarde já tinha dois processos automatizados rodando."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TP</div>
+            <div>
+              <div class="testimonial-name">Thiago P.</div>
+              <div class="testimonial-role">Consultor autônomo</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       6. FAQ
+  ════════════════════════════════ -->
+  <section id="faq">
+    <div class="container reveal">
+      <p class="section-label">❓ Dúvidas frequentes</p>
+      <h2>Perguntas antes de comprar</h2>
+      <div class="divider"></div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Preciso saber programar para aplicar o guia?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Não. O guia foi feito exatamente para quem não tem conhecimento técnico.
+            Cada processo é explicado passo a passo, com as ferramentas certas para cada situação.
+            Se você sabe usar WhatsApp e planilha, você consegue implementar.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Precisa pagar pelo ChatGPT ou outras ferramentas?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            A maioria dos processos funciona com planos gratuitos das ferramentas indicadas.
+            Onde for necessário um plano pago, o guia indica a opção mais barata e explica
+            quando vale a pena pagar — e quando não vale.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Funciona para qualquer tipo de negócio?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Sim. Os 5 processos cobertos — emails, relatórios, WhatsApp, planilhas e reuniões —
+            existem em praticamente todo negócio: comércio, serviços, saúde, educação, consultoria.
+            Você adapta para a sua realidade seguindo o modelo apresentado.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            É só teoria ou tem passo a passo prático?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            É 100% prático. Sem papo teórico, sem história de empresa americana.
+            Cada processo tem: o problema, a ferramenta, a configuração e o resultado esperado.
+            Você lê e já sai implementando.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            E se eu não gostar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            7 dias de garantia incondicional. Se você ler e achar que não valeu, é só pedir o
+            reembolso — sem perguntas, sem burocracia. O risco é zero.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       8. CTA FINAL
+  ════════════════════════════════ -->
+  <section id="cta-final">
+    <div class="container reveal">
+      <h2>A diferença entre você e seu concorrente agora é <span class="cyan">R$27</span></h2>
+      <p class="sub-text">
+        Ele já tem IA trabalhando enquanto dorme. Você pode ter também — hoje, sem programar, sem contratar.
+      </p>
+
+      <div class="price-block">
+        <p class="old-price">De R$97</p>
+        <p class="new-price"><sup>R$</sup>27</p>
+        <p class="price-note">pagamento único · acesso imediato</p>
+      </div>
+
+      <a href="https://pay.kiwify.com.br/Qhx40Lj"
+         class="btn-cta"
+         id="cta-final-btn"
+         onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
+        GARANTIR MEU GUIA AGORA
+      </a>
+
+      <p class="guarantee">
+        🛡️ 7 dias de garantia incondicional. Não gostou, devolvemos tudo.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       9. FOOTER
+  ════════════════════════════════ -->
+  <footer>
+    <p class="footer-brand">@mateus_agentes</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mateus_agentes" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://wa.me/35991480961" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+             fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
+    <p class="copyright">© 2026 @mateus_agentes · Todos os direitos reservados</p>
+  </footer>
+
+
+  <script>
+    /* Scroll-reveal */
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    reveals.forEach(el => io.observe(el));
+
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
