@@ -2,7 +2,7 @@
   "buildCommand": "",
   "installCommand": "",
   "outputDirectory": ".",
-  "framework": "html",
+  "framework": ".",
   "rewrites": [
     {
       "source": "/:path*",
