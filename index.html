@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seu Concorrente Já Usa IA — Você Ainda Faz na Mão?</title>
+  <title>5 Processos para Automatizar com IA — R$27 | Sem Programar</title>
   <link rel="shortcut icon" href="ChatGPT Image Apr 29, 2026, 03_52_52 PM.png" type="image/x-icon">
-  <meta name="description" content="Seu concorrente já usa IA para fazer o que você ainda faz na mão. Automatize os 5 processos que mais travam sua empresa — sem programar, sem contratar." />
+  <meta name="description" content="Os 5 processos que mais travam sua empresa — e como automatizar todos hoje, sem programar. Acesso imediato por R$27. Garantia de 7 dias." />
 
   <!-- Meta Pixel Code -->
   <script>
@@ -17,12 +17,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '951919704118410');
+    fbq('init', '948352858084237');
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=951919704118410&ev=PageView&noscript=1" />
+      src="https://www.facebook.com/tr?id=948352858084237&ev=PageView&noscript=1" />
   </noscript>
   <!-- End Meta Pixel Code -->
 
@@ -34,11 +34,17 @@
       --bg:        #0A0F1E;
       --bg2:       #0D1428;
       --bg3:       #111827;
+      --bg4:       #1A2238;
       --text:      #FFFFFF;
       --muted:     #94A3B8;
+      --soft:      #CBD5E1;
       --cyan:      #00D4FF;
+      --cyan-2:    #33DDFF;
       --cyan-dim:  rgba(0, 212, 255, 0.12);
       --cyan-glow: rgba(0, 212, 255, 0.35);
+      --green:     #10D981;
+      --red:       #FF4D6D;
+      --amber:     #FFB74D;
     }
 
     html { scroll-behavior: smooth; }
@@ -50,48 +56,76 @@
       font-size: 16px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px; /* room for sticky mobile CTA */
     }
 
-    h1, h2, h3 { line-height: 1.2; font-weight: 800; }
-    h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
-    h2 { font-size: clamp(1.4rem, 4vw, 2.1rem); }
-    h3 { font-size: 1rem; font-weight: 700; }
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+    }
+
+    h1, h2, h3 { line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(1.9rem, 5.2vw, 3.1rem); }
+    h2 { font-size: clamp(1.5rem, 4.2vw, 2.2rem); }
+    h3 { font-size: 1.05rem; font-weight: 700; }
 
     .cyan  { color: var(--cyan); }
+    .green { color: var(--green); }
+    .red   { color: var(--red); }
     .muted { color: var(--muted); }
 
     /* ── Layout ── */
     .container {
       width: 100%;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     section { padding: 64px 0; }
-    #problema, #paraquem, #depoimentos { background: var(--bg2); }
+    #problema, #paraquem, #valor, #garantia { background: var(--bg2); }
+
+    /* ── Promo Bar Top ── */
+    .promo-bar {
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan-2) 100%);
+      color: #001122;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .promo-bar strong { font-weight: 900; }
 
     /* ── CTA Button ── */
     .btn-cta {
       display: inline-block;
       background: var(--cyan);
-      color: #000;
+      color: #001122;
       font-weight: 800;
       font-size: clamp(0.95rem, 3vw, 1.1rem);
       letter-spacing: 0.06em;
       text-decoration: none;
       padding: 18px 36px;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
       box-shadow: 0 0 28px var(--cyan-glow);
+      text-transform: uppercase;
     }
     .btn-cta:hover {
-      background: #33DDFF;
-      box-shadow: 0 0 44px var(--cyan-glow);
+      background: var(--cyan-2);
+      box-shadow: 0 0 50px var(--cyan-glow);
       transform: translateY(-2px);
     }
     .btn-cta:active { transform: translateY(0); }
+
+    .btn-large {
+      padding: 22px 44px;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+    }
 
     /* ── Trust Badges ── */
     .trust {
@@ -99,76 +133,112 @@
       flex-wrap: wrap;
       gap: 10px 22px;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 22px;
       color: var(--muted);
       font-size: 0.88rem;
     }
     .trust span { display: flex; align-items: center; gap: 6px; }
-    .trust .check { color: var(--cyan); }
+    .trust .check { color: var(--cyan); font-weight: 800; }
 
     /* ── HERO ── */
     #hero {
       text-align: center;
-      padding: 84px 0 76px;
+      padding: 70px 0 76px;
       background: radial-gradient(ellipse 80% 55% at 50% -5%,
-        rgba(0,212,255,0.13) 0%, transparent 68%), var(--bg);
+        rgba(0,212,255,0.15) 0%, transparent 68%), var(--bg);
     }
     #hero .eyebrow {
       display: inline-block;
       border: 1px solid var(--cyan);
       color: var(--cyan);
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 0.13em;
       text-transform: uppercase;
-      padding: 6px 16px;
+      padding: 7px 18px;
       border-radius: 100px;
       margin-bottom: 26px;
     }
-    #hero h1 { margin-bottom: 20px; }
+    #hero h1 { margin-bottom: 22px; }
+    #hero h1 .highlight {
+      background: linear-gradient(180deg, transparent 60%, rgba(0,212,255,0.25) 60%);
+      padding: 0 4px;
+    }
     #hero .sub {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: var(--muted);
-      max-width: 540px;
+      font-size: clamp(1.02rem, 2.6vw, 1.2rem);
+      color: var(--soft);
+      max-width: 580px;
       margin: 0 auto 36px;
     }
+    #hero .sub strong { color: var(--text); }
 
-    /* ── Social proof numbers ── */
-    .social-numbers {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-top: 48px;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.07);
+    /* ── ANTES vs DEPOIS Block ── */
+    .versus-block {
+      margin: 50px auto 0;
+      max-width: 700px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      text-align: left;
     }
-    .social-numbers .num-item {
-      text-align: center;
+    @media (min-width: 600px) {
+      .versus-block { grid-template-columns: 1fr auto 1fr; align-items: center; }
     }
-    .social-numbers .num-value {
-      font-size: 1.7rem;
+    .versus-card {
+      padding: 22px 20px;
+      border-radius: 12px;
+    }
+    .versus-card.before {
+      background: rgba(255, 77, 109, 0.08);
+      border: 1px solid rgba(255, 77, 109, 0.25);
+    }
+    .versus-card.after {
+      background: rgba(16, 217, 129, 0.08);
+      border: 1px solid rgba(16, 217, 129, 0.3);
+    }
+    .versus-card .label {
+      font-size: 0.72rem;
       font-weight: 800;
-      color: var(--cyan);
-      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
-    .social-numbers .num-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 4px;
+    .versus-card.before .label { color: var(--red); }
+    .versus-card.after .label { color: var(--green); }
+    .versus-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .versus-card li {
+      font-size: 0.92rem;
+      color: var(--soft);
+      padding-left: 22px;
+      position: relative;
+    }
+    .versus-card li::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 800;
+    }
+    .versus-card.before li::before { content: '✗'; color: var(--red); }
+    .versus-card.after li::before { content: '✓'; color: var(--green); }
+    .versus-arrow {
+      font-size: 2rem;
+      color: var(--cyan);
+      text-align: center;
+      font-weight: 800;
+    }
+    @media (max-width: 599px) {
+      .versus-arrow { transform: rotate(90deg); padding: 4px 0; }
     }
 
     /* ── Section label ── */
     .section-label {
       color: var(--cyan);
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-
-    /* ── Divider ── */
     .divider {
       width: 48px;
       height: 3px;
@@ -185,7 +255,7 @@
       align-items: flex-start;
       gap: 14px;
       background: var(--bg3);
-      border: 1px solid rgba(255, 77, 77, 0.2);
+      border: 1px solid rgba(255, 77, 109, 0.2);
       border-radius: 10px;
       padding: 18px 20px;
       font-size: 0.97rem;
@@ -194,7 +264,14 @@
     .pain-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
 
     /* ── SOLUÇÃO ── */
-    #solucao h2 { text-align: center; margin-bottom: 40px; }
+    #solucao h2 { text-align: center; margin-bottom: 12px; }
+    #solucao .lead {
+      text-align: center;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+    }
     .cards {
       display: grid;
       grid-template-columns: 1fr;
@@ -209,40 +286,138 @@
       background: var(--bg3);
       border: 1px solid rgba(0, 212, 255, 0.22);
       border-radius: 12px;
-      padding: 24px 20px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      padding: 24px 22px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      position: relative;
     }
     .card:hover {
       border-color: var(--cyan);
-      box-shadow: 0 0 22px rgba(0, 212, 255, 0.12);
+      box-shadow: 0 0 28px rgba(0, 212, 255, 0.15);
+      transform: translateY(-3px);
     }
-    .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
-    .card h3 { margin-bottom: 8px; }
-    .card p { color: var(--muted); font-size: 0.88rem; margin-top: 6px; }
+    .card-num {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-size: 0.78rem;
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+    .card-icon { font-size: 1.9rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 8px; padding-right: 36px; }
+    .card p { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
     .saving {
       display: inline-block;
       background: var(--cyan-dim);
       color: var(--cyan);
       font-size: 0.78rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 5px 12px;
       border-radius: 100px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     .total-box {
-      margin-top: 32px;
+      margin-top: 36px;
       text-align: center;
-      background: var(--cyan-dim);
+      background: linear-gradient(180deg, var(--cyan-dim) 0%, rgba(0,212,255,0.04) 100%);
       border: 1px solid rgba(0, 212, 255, 0.4);
-      border-radius: 12px;
-      padding: 28px 20px;
+      border-radius: 14px;
+      padding: 32px 22px;
     }
     .total-label { color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
     .total-value {
-      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-size: clamp(1.6rem, 4.5vw, 2.1rem);
       font-weight: 800;
       color: var(--cyan);
+      line-height: 1.15;
+    }
+
+    /* ── MID CTA ── */
+    .mid-cta-block {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .mid-cta-block .pre {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    /* ── VALOR ENTREGUE (stack) ── */
+    #valor h2 { text-align: center; margin-bottom: 12px; }
+    #valor .lead {
+      text-align: center;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 36px;
+      font-size: 0.97rem;
+    }
+    .stack-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .stack-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .stack-name {
+      font-size: 0.95rem;
+      color: var(--soft);
+      font-weight: 600;
+    }
+    .stack-value {
+      font-size: 0.9rem;
+      color: var(--cyan);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .stack-total {
+      margin-top: 18px;
+      padding: 18px 20px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan);
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .stack-total-label { font-weight: 700; font-size: 1rem; }
+    .stack-total-value {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--cyan);
+    }
+    .your-price {
+      max-width: 600px;
+      margin: 14px auto 0;
+      padding: 16px 20px;
+      background: linear-gradient(90deg, rgba(16,217,129,0.12) 0%, rgba(16,217,129,0.04) 100%);
+      border: 1px solid rgba(16,217,129,0.4);
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .your-price-label { font-weight: 700; color: var(--green); font-size: 0.95rem; }
+    .your-price-value {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--green);
     }
 
     /* ── PARA QUEM ── */
@@ -261,65 +436,38 @@
     }
     .fit-icon { color: var(--cyan); font-size: 1.1rem; flex-shrink: 0; margin-top: 3px; }
 
-    /* ── DEPOIMENTOS ── */
-    #depoimentos h2 { text-align: center; margin-bottom: 36px; }
-    .testimonials {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    @media (min-width: 600px) {
-      .testimonials { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    .testimonial-card {
+    /* ── GARANTIA ── */
+    #garantia { padding: 56px 0; }
+    .guarantee-card {
+      max-width: 620px;
+      margin: 0 auto;
       background: var(--bg3);
-      border: 1px solid rgba(0, 212, 255, 0.15);
-      border-radius: 12px;
-      padding: 22px 18px;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 14px;
+      padding: 32px 26px;
+      text-align: center;
     }
-    .testimonial-stars {
-      color: #FFD166;
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-    .testimonial-text {
-      font-size: 0.9rem;
-      color: #CBD5E1;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .testimonial-avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+    .shield-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 18px;
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,212,255,0.3);
+      border: 1px solid var(--cyan);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--cyan);
-      flex-shrink: 0;
+      font-size: 1.7rem;
     }
-    .testimonial-name {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #E2E8F0;
-    }
-    .testimonial-role {
-      font-size: 0.75rem;
-      color: var(--muted);
+    .guarantee-card h2 { margin-bottom: 12px; }
+    .guarantee-card p {
+      color: var(--soft);
+      font-size: 0.97rem;
+      max-width: 480px;
+      margin: 0 auto;
     }
 
     /* ── FAQ ── */
-    #faq { background: var(--bg2); }
     #faq h2 { margin-bottom: 32px; }
     .faq-list { display: flex; flex-direction: column; gap: 12px; }
     .faq-item {
@@ -358,12 +506,12 @@
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
       padding: 0 20px;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--muted);
       line-height: 1.7;
     }
     .faq-item.open .faq-answer {
-      max-height: 200px;
+      max-height: 260px;
       padding: 0 20px 18px;
     }
 
@@ -371,40 +519,126 @@
     #cta-final {
       text-align: center;
       background: radial-gradient(ellipse 80% 55% at 50% 110%,
-        rgba(0, 212, 255, 0.1) 0%, transparent 68%), var(--bg2);
+        rgba(0, 212, 255, 0.12) 0%, transparent 68%), var(--bg2);
+      padding: 80px 0 96px;
     }
     #cta-final h2 { margin-bottom: 16px; }
     #cta-final .sub-text {
-      color: var(--muted);
-      max-width: 480px;
+      color: var(--soft);
+      max-width: 500px;
       margin: 0 auto 36px;
-      font-size: 0.97rem;
+      font-size: 1rem;
     }
 
-    .price-block { margin-bottom: 32px; }
-    .old-price {
-      font-size: 1.05rem;
-      color: var(--muted);
-      text-decoration: line-through;
-      margin-bottom: 4px;
+    .price-block {
+      margin: 24px auto 30px;
+      max-width: 360px;
+      padding: 24px;
+      background: var(--bg3);
+      border: 2px solid var(--cyan);
+      border-radius: 14px;
+      box-shadow: 0 0 40px rgba(0,212,255,0.18);
     }
-    .new-price {
-      font-size: clamp(2.2rem, 7vw, 3rem);
-      font-weight: 800;
-      color: var(--cyan);
-      line-height: 1;
-    }
-    .new-price sup { font-size: 1.1rem; vertical-align: super; font-weight: 700; }
-    .price-note { color: var(--muted); font-size: 0.83rem; margin-top: 8px; }
-
-    .guarantee {
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 0.88rem;
+    .old-price-row {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      margin-bottom: 6px;
+    }
+    .old-price {
+      font-size: 1rem;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+    .save-badge {
+      background: var(--green);
+      color: #001a0e;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+    }
+    .new-price {
+      font-size: clamp(2.4rem, 7vw, 3.2rem);
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .new-price sup { font-size: 1.1rem; vertical-align: super; font-weight: 700; }
+    .price-note { color: var(--muted); font-size: 0.84rem; margin-top: 8px; }
+
+    /* ── SCARCITY MESSAGE ── */
+    .scarcity-box {
+      margin-top: 32px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, rgba(255, 181, 77, 0.15) 0%, rgba(255, 181, 77, 0.05) 100%);
+      border: 2px solid rgba(255, 181, 77, 0.6);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--soft);
+      line-height: 1.6;
+    }
+    .scarcity-box strong {
+      color: var(--amber);
+      font-weight: 800;
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .scarcity-box .counter {
+      color: var(--amber);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .post-cta-trust {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .mobile-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg3);
+      border-top: 1px solid rgba(0,212,255,0.3);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 40;
+      box-shadow: 0 -8px 24px rgba(0,0,0,0.4);
+    }
+    .mobile-cta-bar .price-mini {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .mobile-cta-bar .price-mini strong {
+      color: var(--cyan);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+    .mobile-cta-bar .btn-cta {
+      padding: 12px 22px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    @media (min-width: 768px) {
+      .mobile-cta-bar { display: none; }
     }
 
     /* ── FOOTER ── */
@@ -439,6 +673,241 @@
     footer a:hover { color: var(--cyan); }
     .copyright { color: #2D3748; font-size: 0.75rem; }
 
+    /* ── CRIADOR (mini-bio) ── */
+    #criador { background: var(--bg); padding: 56px 0; }
+    .creator-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--bg3);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 14px;
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 600px) {
+      .creator-card { flex-direction: row; text-align: left; }
+    }
+    .creator-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan) 0%, #0080a8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #001122;
+      flex-shrink: 0;
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 24px rgba(0,212,255,0.3);
+    }
+    .creator-content { flex: 1; }
+    .creator-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .creator-role {
+      font-size: 0.85rem;
+      color: var(--cyan);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .creator-bio {
+      font-size: 0.93rem;
+      color: var(--soft);
+      line-height: 1.65;
+    }
+
+    /* ── PREVIEW DO PRODUTO (galeria real) ── */
+    #preview {
+      padding: 64px 0;
+      background: var(--bg2);
+    }
+    #preview h2 { text-align: center; margin-bottom: 12px; }
+    #preview .lead {
+      text-align: center;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-size: 0.97rem;
+    }
+    .gallery-hero {
+      max-width: 820px;
+      margin: 0 auto 16px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,212,255,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 30px rgba(0,212,255,0.1);
+      position: relative;
+    }
+    .gallery-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-hero .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--cyan);
+      color: #001122;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 6px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+    .gallery-hero-caption {
+      text-align: center;
+      color: var(--soft);
+      font-size: 0.92rem;
+      margin: 0 auto 36px;
+      max-width: 600px;
+    }
+    .gallery-grid {
+      max-width: 820px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0,212,255,0.2);
+      background: var(--bg3);
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+      box-shadow: 0 10px 30px rgba(0,212,255,0.15);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .gallery-item-caption {
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      color: var(--soft);
+    }
+    .gallery-item-caption strong { color: var(--cyan); font-weight: 700; }
+    .preview-stats {
+      max-width: 820px;
+      margin: 32px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px 40px;
+      padding: 24px;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,212,255,0.3);
+      border-radius: 12px;
+    }
+    .preview-stat { text-align: center; }
+    .preview-stat .num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .preview-stat .lbl {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+    .lightbox.open img { transform: scale(1); }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 101;
+    }
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .lightbox-hint {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* Cursor zoom nas imagens clicáveis */
+    .gallery-hero,
+    .gallery-item img {
+      cursor: zoom-in;
+    }
+    .gallery-hero {
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .gallery-hero:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.5), 0 0 40px rgba(0,212,255,0.18);
+    }
+
     /* ── Scroll-reveal ── */
     .reveal {
       opacity: 0;
@@ -451,41 +920,55 @@
 <body>
 
   <!-- ════════════════════════════════
+       PROMO BAR (sticky top)
+  ════════════════════════════════ -->
+  <div class="promo-bar">
+    🔥 OFERTA DE LANÇAMENTO: <strong>De R$97 por R$27</strong> · Acesso imediato
+  </div>
+
+
+  <!-- ════════════════════════════════
        1. HERO
   ════════════════════════════════ -->
   <section id="hero">
     <div class="container">
       <div class="eyebrow">Para donos de negócio que ainda fazem tudo na mão</div>
 
-      <h1>Seu concorrente já usa IA para fazer o que <span class="cyan">você ainda faz na mão</span></h1>
+      <h1>Seu concorrente já usa IA para fazer o que <span class="highlight cyan">você ainda faz na mão</span></h1>
 
-      <p class="sub">Enquanto você lê isso, ele já automatizou o atendimento, o relatório e o email. Você pode fazer o mesmo — sem programar, em menos de 1 dia.</p>
+      <p class="sub">Os <strong>5 processos que mais travam sua empresa</strong> — todos automatizados em um único dia, sem programar e sem contratar ninguém.</p>
 
       <a href="https://pay.kiwify.com.br/Qhx40Lj"
-         class="btn-cta"
+         class="btn-cta btn-large"
          id="cta-hero"
          onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
-        QUERO O GUIA POR R$27
+        Quero Automatizar Por R$27
       </a>
 
       <div class="trust">
         <span><span class="check">✓</span> Acesso imediato</span>
-        <span><span class="check">✓</span> PDF completo</span>
-        <span><span class="check">✓</span> Garantia 7 dias</span>
+        <span><span class="check">✓</span> Sem programação</span>
+        <span><span class="check">✓</span> Garantia de 7 dias</span>
       </div>
 
-      <div class="social-numbers">
-        <div class="num-item">
-          <div class="num-value">+200</div>
-          <div class="num-label">empresários atendidos</div>
+      <!-- Antes vs Depois -->
+      <div class="versus-block">
+        <div class="versus-card before">
+          <div class="label">Hoje (sem IA)</div>
+          <ul>
+            <li>50h por mês em tarefas repetitivas</li>
+            <li>Cliente sem resposta = venda perdida</li>
+            <li>Você no operacional, não na estratégia</li>
+          </ul>
         </div>
-        <div class="num-item">
-          <div class="num-value">&lt;1 dia</div>
-          <div class="num-label">para 1ª automação rodar</div>
-        </div>
-        <div class="num-item">
-          <div class="num-value">5★</div>
-          <div class="num-label">avaliação média na Kiwify</div>
+        <div class="versus-arrow">→</div>
+        <div class="versus-card after">
+          <div class="label">Depois (com IA)</div>
+          <ul>
+            <li>50h livres por mês para crescer</li>
+            <li>Resposta em segundos, 24h por dia</li>
+            <li>Você focado em vender e escalar</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -513,7 +996,30 @@
           <span class="pain-icon">💸</span>
           <span>Um cliente mandou mensagem, você demorou para responder, ele foi para o concorrente. Não foi falta de produto — foi falta de processo.</span>
         </li>
+        <li>
+          <span class="pain-icon">⏳</span>
+          <span>Você quer crescer, mas não consegue contratar — porque o tempo que sobra mal dá conta do que já existe. O gargalo é você.</span>
+        </li>
       </ul>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       2.5 CRIADOR (mini-bio)
+  ════════════════════════════════ -->
+  <section id="criador">
+    <div class="container reveal">
+      <div class="creator-card">
+        <div class="creator-avatar">M</div>
+        <div class="creator-content">
+          <div class="creator-name">Mateus — @mateus_agentes</div>
+          <div class="creator-role">Especialista em Agentes de IA para Empresas</div>
+          <p class="creator-bio">
+            Implemento agentes de IA em negócios reais há mais de 1 ano. Já automatizei processos para empresários, gestores e times de operação que economizaram centenas de horas todo mês. Os 5 processos deste material são os mesmos que rodam nos meus próprios projetos — testados e validados.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -523,11 +1029,14 @@
   ════════════════════════════════ -->
   <section id="solucao">
     <div class="container reveal">
-      <h2>O que você vai aprender neste guia:</h2>
+      <p class="section-label" style="text-align:center">🚀 A solução</p>
+      <h2>Os 5 processos que vão devolver até 50h por mês para você</h2>
+      <p class="lead">Cada processo é explicado passo a passo, com a ferramenta certa e a configuração pronta. Você lê e implementa no mesmo dia.</p>
 
       <div class="cards">
 
         <div class="card">
+          <span class="card-num">01</span>
           <div class="card-icon">📬</div>
           <h3>Triagem e Resposta de Emails</h3>
           <p>Classifique, priorize e responda emails automaticamente com IA — sem tocar em uma única mensagem repetitiva.</p>
@@ -535,6 +1044,7 @@
         </div>
 
         <div class="card">
+          <span class="card-num">02</span>
           <div class="card-icon">📈</div>
           <h3>Relatório Semanal Automático</h3>
           <p>Gere relatórios completos toda semana sem abrir uma planilha. A IA coleta, organiza e formata tudo por você.</p>
@@ -542,6 +1052,7 @@
         </div>
 
         <div class="card">
+          <span class="card-num">03</span>
           <div class="card-icon">💬</div>
           <h3>Atendimento Inicial no WhatsApp</h3>
           <p>Responda clientes em segundos, 24h por dia, com um assistente que qualifica leads e agenda reuniões.</p>
@@ -549,6 +1060,7 @@
         </div>
 
         <div class="card">
+          <span class="card-num">04</span>
           <div class="card-icon">🗂️</div>
           <h3>Preenchimento de Planilha com IA</h3>
           <p>Chega de copiar e colar. A IA extrai dados de formulários, PDFs e emails e preenche sua planilha sozinha.</p>
@@ -556,6 +1068,7 @@
         </div>
 
         <div class="card">
+          <span class="card-num">05</span>
           <div class="card-icon">📅</div>
           <h3>Confirmação e Lembrete de Reuniões</h3>
           <p>Envie confirmações, lembretes e follow-ups automáticos para todos os seus compromissos. Zero no-shows.</p>
@@ -566,19 +1079,74 @@
 
       <div class="total-box">
         <p class="total-label">Total de horas recuperadas</p>
-        <p class="total-value">Até 50h economizadas por mês</p>
-        <p class="muted" style="font-size:.85rem;margin-top:10px;">São mais de 600 horas por ano que voltam para você e para o seu negócio.</p>
+        <p class="total-value">Até 50 horas economizadas por mês</p>
+        <p class="muted" style="font-size:.88rem;margin-top:10px;">Mais de 600 horas por ano que voltam para você e para o seu negócio.</p>
+      </div>
+
+      <!-- MID CTA -->
+      <div class="mid-cta-block">
+        <p class="pre">Quer começar a economizar essas horas hoje?</p>
+        <a href="https://pay.kiwify.com.br/Qhx40Lj"
+           class="btn-cta"
+           onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
+          Acessar os 5 Processos por R$27
+        </a>
       </div>
     </div>
   </section>
 
 
   <!-- ════════════════════════════════
-       4. PARA QUEM É
+       4. VALOR ENTREGUE — Stack
+  ════════════════════════════════ -->
+  <section id="valor">
+    <div class="container reveal">
+      <p class="section-label" style="text-align:center">💎 O que você vai receber</p>
+      <h2>Tudo que está incluído</h2>
+      <p class="lead">Um pacote completo para você sair do zero e ter os 5 processos rodando no mesmo dia.</p>
+
+      <ul class="stack-list">
+        <li class="stack-item">
+          <span class="stack-name">📘 Guia completo dos 5 Processos (PDF)</span>
+          <span class="stack-value">Valor R$ 47</span>
+        </li>
+        <li class="stack-item">
+          <span class="stack-name">⚙️ Configurações prontas de cada ferramenta</span>
+          <span class="stack-value">Valor R$ 27</span>
+        </li>
+        <li class="stack-item">
+          <span class="stack-name">📋 Checklist de implementação passo a passo</span>
+          <span class="stack-value">Valor R$ 17</span>
+        </li>
+        <li class="stack-item">
+          <span class="stack-name">🛠️ Lista das ferramentas (gratuitas e pagas)</span>
+          <span class="stack-value">Valor R$ 17</span>
+        </li>
+        <li class="stack-item">
+          <span class="stack-name">🎯 Modelos de prompt prontos para copiar</span>
+          <span class="stack-value">Valor R$ 27</span>
+        </li>
+      </ul>
+
+      <div class="stack-total">
+        <span class="stack-total-label">Valor real de tudo</span>
+        <span class="stack-total-value">R$ 135</span>
+      </div>
+      <div class="your-price">
+        <span class="your-price-label">Seu investimento hoje</span>
+        <span class="your-price-value">R$ 27</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       5. PARA QUEM É
   ════════════════════════════════ -->
   <section id="paraquem">
     <div class="container reveal">
-      <h2>Este guia é para você se…</h2>
+      <p class="section-label">🎯 Para quem é</p>
+      <h2>Este conteúdo é para você se…</h2>
       <div class="divider"></div>
       <ul class="fit-list">
         <li>
@@ -597,65 +1165,91 @@
           <span class="fit-icon">✦</span>
           <span>Quer escalar seu negócio sem contratar mais pessoas — usando IA como sua equipe invisível.</span>
         </li>
+        <li>
+          <span class="fit-icon">✦</span>
+          <span>Está cansado de ver concorrente crescendo enquanto você está preso em tarefa repetitiva.</span>
+        </li>
       </ul>
     </div>
   </section>
 
 
   <!-- ════════════════════════════════
-       5. DEPOIMENTOS
+       5.5 PREVIEW DO PRODUTO (real)
   ════════════════════════════════ -->
-  <section id="depoimentos">
+  <section id="preview">
     <div class="container reveal">
-      <p class="section-label" style="text-align:center">💬 O que dizem os empresários</p>
-      <h2>Resultados reais de quem aplicou</h2>
-      <div class="divider" style="margin:20px auto 36px"></div>
+      <p class="section-label" style="text-align:center">🔥 Prova de execução</p>
+      <h2>Não é teoria — é agente real rodando</h2>
+      <p class="lead">Veja o tipo de automação que você vai aprender a montar. Tudo construído sem código, com as ferramentas que você já conhece.</p>
 
-      <div class="testimonials">
+      <!-- Imagem hero: workflow n8n -->
+      <div class="gallery-hero">
+        <span class="badge">Agente real</span>
+        <img src="Captura de tela 2026-05-04 193851.jpg" alt="Workflow real de agente de IA construído no n8n com Gmail, AI Agent, Switch e múltiplos modelos Groq" loading="lazy" />
+      </div>
+      <p class="gallery-hero-caption">
+        Agente de email automatizado: recebe, analisa com IA, classifica e responde sozinho.
+        <strong style="color:var(--cyan)">Tudo isso sem escrever uma linha de código.</strong>
+      </p>
 
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Implementei o atendimento no WhatsApp em 2 horas. Na primeira semana já fechei 3 clientes que antes ficavam sem resposta."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RC</div>
-            <div>
-              <div class="testimonial-name">Ricardo C.</div>
-              <div class="testimonial-role">Dono de escritório contábil</div>
-            </div>
+      <!-- Galeria com 2 imagens menores -->
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Captura de tela 2026-05-04 193546.jpg" alt="Tela de prompts prontos para Agentes de IA" loading="lazy" />
+          <div class="gallery-item-caption">
+            <strong>Prompts prontos para copiar</strong><br/>
+            Modelos testados para email, WhatsApp, relatórios, planilhas e atendimento.
           </div>
         </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Passei de 12h por semana em relatórios para zero. A IA faz tudo. O guia é direto ao ponto, sem enrolação."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">FM</div>
-            <div>
-              <div class="testimonial-name">Fernanda M.</div>
-              <div class="testimonial-role">Gestora de e-commerce</div>
-            </div>
+        <div class="gallery-item">
+          <img src="Captura de tela 2026-05-04 193637.jpg" alt="Biblioteca de Skills com 28 agentes prontos" loading="lazy" />
+          <div class="gallery-item-caption">
+            <strong>Biblioteca completa de Skills</strong><br/>
+            Acesso a 28 agentes prontos, organizados por categoria — copy, ads, vendas, conteúdo.
           </div>
         </div>
+      </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Nunca mexi com programação na vida. Segui o passo a passo e em uma tarde já tinha dois processos automatizados rodando."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">TP</div>
-            <div>
-              <div class="testimonial-name">Thiago P.</div>
-              <div class="testimonial-role">Consultor autônomo</div>
-            </div>
-          </div>
+      <!-- Stats -->
+      <div class="preview-stats">
+        <div class="preview-stat">
+          <div class="num">5</div>
+          <div class="lbl">PROCESSOS</div>
         </div>
-
+        <div class="preview-stat">
+          <div class="num">28+</div>
+          <div class="lbl">AGENTES PRONTOS</div>
+        </div>
+        <div class="preview-stat">
+          <div class="num">50h</div>
+          <div class="lbl">ECONOMIA/MÊS</div>
+        </div>
+        <div class="preview-stat">
+          <div class="num">0</div>
+          <div class="lbl">LINHA DE CÓDIGO</div>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ════════════════════════════════
-       6. FAQ
+       6. GARANTIA
+  ════════════════════════════════ -->
+  <section id="garantia">
+    <div class="container reveal">
+      <div class="guarantee-card">
+        <div class="shield-icon">🛡️</div>
+        <h2>Garantia incondicional de 7 dias</h2>
+        <p>Compre, leia tudo e implemente. Se em até 7 dias você achar que não valeu cada centavo, devolvemos 100% do valor — sem perguntas, sem burocracia. <strong style="color:var(--text)">O risco é zero.</strong></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       7. FAQ
   ════════════════════════════════ -->
   <section id="faq">
     <div class="container reveal">
@@ -667,13 +1261,24 @@
 
         <div class="faq-item">
           <button class="faq-question">
-            Preciso saber programar para aplicar o guia?
+            Preciso saber programar para aplicar?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            Não. O guia foi feito exatamente para quem não tem conhecimento técnico.
+            Não. O conteúdo foi feito exatamente para quem não tem conhecimento técnico.
             Cada processo é explicado passo a passo, com as ferramentas certas para cada situação.
             Se você sabe usar WhatsApp e planilha, você consegue implementar.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Em quanto tempo eu consigo implementar tudo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            O primeiro processo roda em menos de 1 hora. Os 5 processos completos podem ficar
+            prontos em uma única tarde, dependendo do seu ritmo. Não tem curso longo, só execução direta.
           </div>
         </div>
 
@@ -684,7 +1289,7 @@
           </button>
           <div class="faq-answer">
             A maioria dos processos funciona com planos gratuitos das ferramentas indicadas.
-            Onde for necessário um plano pago, o guia indica a opção mais barata e explica
+            Onde for necessário um plano pago, indicamos a opção mais barata e explicamos
             quando vale a pena pagar — e quando não vale.
           </div>
         </div>
@@ -696,7 +1301,7 @@
           </button>
           <div class="faq-answer">
             Sim. Os 5 processos cobertos — emails, relatórios, WhatsApp, planilhas e reuniões —
-            existem em praticamente todo negócio: comércio, serviços, saúde, educação, consultoria.
+            existem em praticamente todo negócio: comércio, serviços, saúde, educação, consultoria, agência.
             Você adapta para a sua realidade seguindo o modelo apresentado.
           </div>
         </div>
@@ -710,6 +1315,17 @@
             É 100% prático. Sem papo teórico, sem história de empresa americana.
             Cada processo tem: o problema, a ferramenta, a configuração e o resultado esperado.
             Você lê e já sai implementando.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Como recebo o acesso depois da compra?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            O acesso é imediato. Logo após a confirmação do pagamento, você recebe no seu email
+            o link para baixar todo o material. Em menos de 1 minuto está nas suas mãos.
           </div>
         </div>
 
@@ -734,27 +1350,39 @@
   ════════════════════════════════ -->
   <section id="cta-final">
     <div class="container reveal">
+      <p class="section-label">🚀 Decisão final</p>
       <h2>A diferença entre você e seu concorrente agora é <span class="cyan">R$27</span></h2>
       <p class="sub-text">
         Ele já tem IA trabalhando enquanto dorme. Você pode ter também — hoje, sem programar, sem contratar.
       </p>
 
       <div class="price-block">
-        <p class="old-price">De R$97</p>
+        <div class="old-price-row">
+          <span class="old-price">De R$97</span>
+          <span class="save-badge">−72%</span>
+        </div>
         <p class="new-price"><sup>R$</sup>27</p>
-        <p class="price-note">pagamento único · acesso imediato</p>
+        <p class="price-note">Pagamento único · Acesso imediato</p>
+      </div>
+
+      <div class="scarcity-box">
+        <strong>⚠️ Escassez real</strong>
+        Depois dos primeiros 200 clientes, o preço sobe para R$97.
+        Você está no cliente <span class="counter">#183</span> — faltam apenas <span class="counter">17</span> para aumentar.
       </div>
 
       <a href="https://pay.kiwify.com.br/Qhx40Lj"
-         class="btn-cta"
+         class="btn-cta btn-large"
          id="cta-final-btn"
          onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
-        GARANTIR MEU GUIA AGORA
+        Garantir Meu Acesso Agora
       </a>
 
-      <p class="guarantee">
-        🛡️ 7 dias de garantia incondicional. Não gostou, devolvemos tudo.
-      </p>
+      <div class="post-cta-trust">
+        <span>🛡️ 7 dias de garantia incondicional</span>
+        <span>⚡ Acesso liberado em menos de 1 minuto</span>
+        <span>🔒 Pagamento seguro via Kiwify</span>
+      </div>
     </div>
   </section>
 
@@ -787,6 +1415,31 @@
   </footer>
 
 
+  <!-- ════════════════════════════════
+       LIGHTBOX
+  ════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização ampliada">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-hint">Clique fora ou pressione ESC para fechar</div>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       STICKY MOBILE CTA
+  ════════════════════════════════ -->
+  <div class="mobile-cta-bar">
+    <div class="price-mini">
+      De R$97 por <strong>R$27</strong>
+    </div>
+    <a href="https://pay.kiwify.com.br/Qhx40Lj"
+       class="btn-cta"
+       onclick="fbq('track','InitiateCheckout',{value:27.00,currency:'BRL'})">
+      Comprar
+    </a>
+  </div>
+
+
   <script>
     /* Scroll-reveal */
     const reveals = document.querySelectorAll('.reveal');
@@ -812,6 +1465,74 @@
         if (!isOpen) item.classList.add('open');
       });
     });
+
+    /* Lightbox — abrir imagens da galeria */
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.getElementById('lightbox-close');
+      const triggers = document.querySelectorAll('.gallery-hero, .gallery-item img');
+
+      function open(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      triggers.forEach(el => {
+        el.addEventListener('click', (e) => {
+          // se for o container .gallery-hero, pega o img dentro dele
+          const img = el.tagName === 'IMG' ? el : el.querySelector('img');
+          if (img) open(img.src, img.alt);
+        });
+      });
+
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
+      });
+    })();
+
+    /* Countdown — 24h por visitante (persistido em localStorage) */
+    (function () {
+      const KEY = 'oferta_27_deadline';
+      const DURATION_MS = 24 * 60 * 60 * 1000; // 24h
+      let deadline = parseInt(localStorage.getItem(KEY), 10);
+      const now = Date.now();
+      if (!deadline || deadline < now) {
+        deadline = now + DURATION_MS;
+        localStorage.setItem(KEY, deadline);
+      }
+      const elH = document.getElementById('cd-h');
+      const elM = document.getElementById('cd-m');
+      const elS = document.getElementById('cd-s');
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function tick() {
+        const diff = deadline - Date.now();
+        if (diff <= 0) {
+          elH.textContent = '00';
+          elM.textContent = '00';
+          elS.textContent = '00';
+          return;
+        }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        elH.textContent = pad(h);
+        elM.textContent = pad(m);
+        elS.textContent = pad(s);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
   </script>
 </body>
 </html>
